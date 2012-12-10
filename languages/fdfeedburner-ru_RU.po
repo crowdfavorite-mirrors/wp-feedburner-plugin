@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FD Feedburner Plugin v1.45\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2012-11-16 21:06:43+0000\n"
+"Last-Translator: CEO Vizitti vizitti.com\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: fdfeedburner.php:43
+#: fdfeedburner.php:44
+#@ fdfeedburner
+msgid "Feedburner"
+msgstr "Feedburner"
+
+#: fdfeedburner.php:116
+#@ fdfeedburner
+msgid "Configuration updated."
+msgstr "Настройки сохранены."
+
+#: fdfeedburner.php:120
+#@ fdfeedburner
+msgid "Feedburner Configuration"
+msgstr "Настройка Feedburner"
+
+#: fdfeedburner.php:122
+#@ fdfeedburner
+msgid "How does this work?"
+msgstr "Как это работает?"
+
+#: fdfeedburner.php:123
+#@ fdfeedburner
+msgid "This plugin automatically redirects all of your existing feeds to Feedburner (including category and tag feeds)."
+msgstr "Этот плагин автоматически перенаправляет все ваши существующие фиды на Feedburner (включая фиды на категории и теги)."
+
+#: fdfeedburner.php:124
+#@ fdfeedburner
+msgid "First go to <a href=\"http://feedburner.com\">Feedburner.com</a> and burn your feed. Enter the URL Feedburner created for you. You may optionally redirect your comments feed using the same procedure. To disable redirection, disable the plugin or erase the URLs."
+msgstr "Для начала зайдите на <a href=\"http://feedburner.com\">Feedburner.com</a> и добавьте ваш фид. Введите URL, который Feedburner создаст для вас. При желании вы можете использовать те же процедуры для добавления фида комментариев. Что бы отключить перенаправление, деактивируйте плагин или почистите URL'ы."
+
+#: fdfeedburner.php:125
+#@ default
+msgid "Once you enter URLs your feeds will be redirected automatically and you do not need to take any further action."
+msgstr ""
+
+#: fdfeedburner.php:125
+#@ fdfeedburner
+msgid "Note that your feeds may not appear to redirect to Feedburner until you add a new post."
+msgstr "Учтите, что ваши фиды могут не перенаправляться на Feedburner , пока вы не добавите новую запись."
+
+#: fdfeedburner.php:128
+#@ fdfeedburner
+msgid "Redirect my feeds here:"
+msgstr "Перенаправить мои фиды сюда:"
+
+#: fdfeedburner.php:131
+#@ fdfeedburner
+msgid "Redirect my comments feed here:"
+msgstr "Перенаправить фиды комментариев сюда:"
+
+#: fdfeedburner.php:134
+#@ fdfeedburner
+msgid "Advanced Options"
+msgstr "Дополнительные опции"
+
+#: fdfeedburner.php:137
+#@ fdfeedburner
+msgid "Do not redirect category or tag feeds"
+msgstr "Не перенаправлять фиды тегов и категорий"
+
+#: fdfeedburner.php:141
+#@ fdfeedburner
+msgid "Append category/tag to URL for category/tag feeds"
+msgstr "Добавить категорию/тег к URL для фидов категорий и тегов"
+
+#: fdfeedburner.php:145
+#@ fdfeedburner
+msgid "Do not redirect search result feeds"
+msgstr "Не перенаправлять фиды результатов поиска"
+
+#: fdfeedburner.php:148
+#@ fdfeedburner
+msgid "Save"
+msgstr "Сохранить"
+

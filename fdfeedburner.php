@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: FD Feedburner Plugin
+ Plugin Name: FD Feedburner Plugin
 Plugin URI: http://flagrantdisregard.com/feedburner/
 Description: Redirects all feeds to a Feedburner feed
 Author: John Watson
 Author URI: http://flagrantdisregard.com/
-Version: 1.45
+Version: 1.46
 
 Copyright (C) Sat Feb 18 2006 John Watson
 john@flagrantdisregard.com
@@ -26,7 +26,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-*/ 
+*/
 
 define('FDFEEDBURNER_TEXTDOMAIN', 'fdfeedburner');
 
@@ -40,9 +40,9 @@ function feedburner_config_page() {
 	global $wpdb;
 	if ( function_exists('add_submenu_page') )
 		add_submenu_page('options-general.php',
-			__('Feedburner', FDFEEDBURNER_TEXTDOMAIN),
-			__('Feedburner', FDFEEDBURNER_TEXTDOMAIN),
-			'manage_options', __FILE__, 'feedburner_conf');
+				__('Feedburner', FDFEEDBURNER_TEXTDOMAIN),
+				__('Feedburner', FDFEEDBURNER_TEXTDOMAIN),
+				'manage_options', __FILE__, 'feedburner_conf');
 }
 
 function feedburner_fix_url($url) {
@@ -60,54 +60,62 @@ function feedburner_conf() {
 	if (!isset($options['feedburner_append_cats'])) $options['feedburner_append_cats'] = 0;
 	if (!isset($options['feedburner_no_cats'])) $options['feedburner_no_cats'] = 0;
 	if (!isset($options['feedburner_no_search'])) $options['feedburner_no_search'] = 0;
-	
+	if (!isset($options['feedburner_no_author'])) $options['feedburner_no_author'] = 0;
+
 	$updated = false;
 	if ( isset($_POST['submit']) ) {
 		check_admin_referer('fdfeedburner', 'fdfeedburner-admin');
-		
+
 		if (isset($_POST['feedburner_url'])) {
 			$feedburner_url = $_POST['feedburner_url'];
 			if ($feedburner_url != null) $feedburner_url = feedburner_fix_url($feedburner_url);
 		} else {
 			$feedburner_url = null;
 		}
-		
+
 		if (isset($_POST['feedburner_comment_url'])) {
 			$feedburner_comment_url = $_POST['feedburner_comment_url'];
 			if ($feedburner_comment_url != null) $feedburner_comment_url = feedburner_fix_url($feedburner_comment_url);
 		} else {
 			$feedburner_comment_url = null;
 		}
-		
+
 		if (isset($_POST['feedburner_append_cats'])) {
 			$feedburner_append_cats = $_POST['feedburner_append_cats'];
 		} else {
 			$feedburner_append_cats = 0;
 		}
-		
+
 		if (isset($_POST['feedburner_no_cats'])) {
 			$feedburner_no_cats = $_POST['feedburner_no_cats'];
 		} else {
 			$feedburner_no_cats = 0;
 		}
-		
+
 		if (isset($_POST['feedburner_no_search'])) {
 			$feedburner_no_search = $_POST['feedburner_no_search'];
 		} else {
 			$feedburner_no_search = 0;
 		}
-		
+
+		if (isset($_POST['feedburner_no_author'])) {
+			$feedburner_no_author = $_POST['feedburner_no_author'];
+		} else {
+			$feedburner_no_author = 0;
+		}
+
 		$options['feedburner_url'] = $feedburner_url;
 		$options['feedburner_comment_url'] = $feedburner_comment_url;
 		$options['feedburner_append_cats'] = $feedburner_append_cats;
 		$options['feedburner_no_cats'] = $feedburner_no_cats;
 		$options['feedburner_no_search'] = $feedburner_no_search;
-		
+		$options['feedburner_no_author'] = $feedburner_no_author;
+
 		update_option('fd_feedburner', $options);
-		
+
 		$updated = true;
 	}
-?>
+	?>
 
 <div class="wrap">
 <?php
@@ -145,6 +153,11 @@ if ($updated) {
 	<label for="feedburner_no_search"><?php _e('Do not redirect search result feeds', FDFEEDBURNER_TEXTDOMAIN); ?></label>
 </p>
 
+<p>
+	<input id="feedburner_no_author" name="feedburner_no_author" type="checkbox" value="1"<?php if ($options['feedburner_no_author']==1) echo ' checked'; ?> />
+	<label for="feedburner_no_author"><?php _e('Do not redirect author feeds', FDFEEDBURNER_TEXTDOMAIN); ?></label>
+</p>
+
 <p class="submit" style="text-align: left"><?php wp_nonce_field('fdfeedburner', 'fdfeedburner-admin'); ?><input type="submit" name="submit" value="<?php _e('Save', FDFEEDBURNER_TEXTDOMAIN); ?> &raquo;" /></p>
 </form>
 </div>
@@ -171,10 +184,11 @@ function feedburner_redirect() {
 	if (!isset($options['feedburner_append_cats'])) $options['feedburner_append_cats'] = 0;
 	if (!isset($options['feedburner_no_cats'])) $options['feedburner_no_cats'] = 0;
 	if (!isset($options['feedburner_no_search'])) $options['feedburner_no_search'] = 0;
+	if (!isset($options['feedburner_no_author'])) $options['feedburner_no_author'] = 0;
 	$feed_url = $options['feedburner_url'];
 	$comment_url = $options['feedburner_comment_url'];
 	if ($feed_url == null && $comment_url == null) return;
-	
+
 	// Get category
 	$cat = null;
 	if ($wp->query_vars['category_name'] != null) {
@@ -207,6 +221,12 @@ function feedburner_redirect() {
 		$search = $wp->query_vars['s'];
 	}
 
+	// Get author name
+	$author_name = null;
+	if ($wp->query_vars['author_name'] != null) {
+		$author_name = $wp->query_vars['author_name'];
+	}
+
 	// Redirect comment feed
 	if ($feed == 'comments-rss2' || is_single() || $withcomments) {
 		if ($comment_url != null) {
@@ -225,6 +245,8 @@ function feedburner_redirect() {
 					// If this is a category/tag feed and redirect is disabled, do nothing
 				} else if ($search && $options['feedburner_no_search'] == 1) {
 					// If this is a search result feed and redirect is disabled, do nothing
+				} else if ($author_name && $options['feedburner_no_author'] == 1) {
+					// If this is an author feed and redirect is disabled, do nothing
 				} else {
 					if ($feed_url != null) {
 						// Redirect the feed
@@ -242,4 +264,3 @@ Add action hooks
 ==================================================
 */
 add_action('template_redirect', 'feedburner_redirect');
-?>

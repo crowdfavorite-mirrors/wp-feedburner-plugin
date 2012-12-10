@@ -3,7 +3,7 @@ Contributors: fd
 Donate link: http://flagrantdisregard.com/feedburner/
 Tags: feedburner, redirect, rss, feed
 Requires at least: 2.0
-Tested up to: 3.3.1
+Tested up to: 3.4.2
 Stable tag: trunk
 
 Redirects the main feed and optionally the comments feed seamlessly and
@@ -27,10 +27,15 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 == Installation ==
 
 1. Copy the feedburner-plugin folder into wp-content/plugins
-1. Activate the plugin through the 'Plugins'
+1. Activate the plugin through the Plugins menu
 1. Configure your feed from the new Feedburner Settings submenu
 
 == Changelog ==
+
+= 1.46 =
+* Added "Do not redirect author feeds" option. Patch contributed by Robert McFrazier (lxbn.lexblog.com)
+* Translators: please update your translations to include the new author feeds message (msgid "Do not redirect author feeds") if you can. Thanks!
+* Added Russian translation by Pribory Trista (http://vizitti.com)
 
 = 1.45 =
 * Moved options to Settings menu
