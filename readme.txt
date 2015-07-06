@@ -3,7 +3,7 @@ Contributors: fd
 Donate link: http://flagrantdisregard.com/feedburner/
 Tags: feedburner, redirect, rss, feed
 Requires at least: 2.0
-Tested up to: 3.4.2
+Tested up to: 4.2
 Stable tag: trunk
 
 Redirects the main feed and optionally the comments feed seamlessly and
@@ -31,6 +31,9 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 1. Configure your feed from the new Feedburner Settings submenu
 
 == Changelog ==
+
+= 1.47 =
+* Added Czech translation by Michal Stanke (http://www.mikk.cz/)
 
 = 1.46 =
 * Added "Do not redirect author feeds" option. Patch contributed by Robert McFrazier (lxbn.lexblog.com)

@@ -1,0 +1,103 @@
+# Translation of the WordPress plugin FD Feedburner by .
+# Copyright (C) 2012
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: FD Feedburner Plugin 1.46\n"
+"Report-Msgid-Bugs-To: John Watson (john@flagrantdisregard.com)\n"
+"POT-Creation-Date: 2012-12-04 17:19:02+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-05-31 15:33+0100\n"
+"Last-Translator: Michal Stanke <michal.stanke@mikk.cz>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\\n;\n"
+"Language: cs_CZ\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: fdfeedburner.php:43 fdfeedburner.php:44
+msgid "Feedburner"
+msgstr "Feedburner"
+
+#: fdfeedburner.php:124
+msgid "Configuration updated."
+msgstr "Nastavení aktualizováno."
+
+#: fdfeedburner.php:128
+msgid "Feedburner Configuration"
+msgstr "Nastavení Feedburner"
+
+#: fdfeedburner.php:130
+msgid "How does this work?"
+msgstr "Jak to funguje?"
+
+#: fdfeedburner.php:131
+msgid ""
+"This plugin automatically redirects all of your existing feeds to Feedburner "
+"(including category and tag feeds)."
+msgstr ""
+"Tento plugin automaticky přesměruje všechny existující kanály na Feedburner "
+"(včetně kanálů rubrik a štítků)."
+
+#: fdfeedburner.php:132
+msgid ""
+"First go to <a href=\"http://feedburner.com\">Feedburner.com</a> and burn "
+"your feed. Enter the URL Feedburner created for you. You may optionally "
+"redirect your comments feed using the same procedure. To disable "
+"redirection, disable the plugin or erase the URLs."
+msgstr ""
+"Nejprve navštivte <a href=\"http://feedburner.com\">Feedburner.com</a> a "
+"přidejte  zde svůj kanál. Vložte URL, kterou Vám Feedburner vytvořil. "
+"Volitelně můžete stejným způsobem nastavit přesměrování také pro kanály "
+"komentářů. Pro vypnutí přesměrování tento plugin deaktivujte a nebo smažte "
+"URL."
+
+#: fdfeedburner.php:133
+msgid ""
+"Once you enter URLs your feeds will be redirected automatically and you do "
+"not need to take any further action."
+msgstr ""
+"Jakmile vložíte URL vaše kanály budou přesměrovány automaticky a z vaší "
+"strany již nejsou potřeba žádné zásady."
+
+#: fdfeedburner.php:133
+msgid ""
+"Note that your feeds may not appear to redirect to Feedburner until you add "
+"a new post."
+msgstr ""
+"Vaše kanály se nemusí přesměrovávat na Feedburner dokud nepřidáte nový "
+"příspěvek."
+
+#: fdfeedburner.php:136
+msgid "Redirect my feeds here:"
+msgstr "Přesměrovat mé kanály na:"
+
+#: fdfeedburner.php:139
+msgid "Redirect my comments feed here:"
+msgstr "Přesměrovat kanál komentářů na:"
+
+#: fdfeedburner.php:142
+msgid "Advanced Options"
+msgstr "Rozšířené nastavení"
+
+#: fdfeedburner.php:145
+msgid "Do not redirect category or tag feeds"
+msgstr "Nepřesměrovávat kanály rubrik nebo štítků"
+
+#: fdfeedburner.php:149
+msgid "Append category/tag to URL for category/tag feeds"
+msgstr "Přidat category/tag na konec URL kanálů pro rubriky/štítky"
+
+#: fdfeedburner.php:153
+msgid "Do not redirect search result feeds"
+msgstr "Nepřesměrovávat kanály výsledků hledání"
+
+#: fdfeedburner.php:158
+msgid "Do not redirect author feeds"
+msgstr "Nepřesměrovávat kanály autorů"
+
+#: fdfeedburner.php:161
+msgid "Save"
+msgstr "Uložit"
