@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FD Feedburner Fr\n"
+"Report-Msgid-Bugs-To: John Watson (john@flagrantdisregard.com)\n"
+"POT-Creation-Date: 2015-08-28 21:15-0700\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Ferran Muñoz <ferranml@gmail.com>\n"
+"Language-Team: \n"
+"Language: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2;plural=n>2\n"
+"X-Poedit-Language: Spanish\n"
+"X-Poedit-Country: SPAIN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: fdfeedburner.php:43
+#: fdfeedburner.php:44
+#: fdfeedburner.php:120
+msgid "Feedburner Configuration"
+msgstr "Configuración de feedburner"
+
+#: fdfeedburner.php:116
+msgid "Configuration updated."
+msgstr "Configuración actualizada"
+
+#: fdfeedburner.php:122
+msgid "How does this work?"
+msgstr "¿Cómo funciona?"
+
+#: fdfeedburner.php:123
+msgid "This plugin automatically redirects all of your existing feeds to Feedburner (including category and tag feeds)."
+msgstr "Este plugin redirige automaticamente a todos tus feeds existentes en Feedburner (incluyendo feeds de categorías y etiquetas)"
+
+#: fdfeedburner.php:124
+msgid "First go to <a href=\"http://feedburner.com\">Feedburner.com</a> and burn your feed. Enter the URL Feedburner created for you. You may optionally redirect your comments feed using the same procedure. To disable redirection, disable the plugin or erase the URLs."
+msgstr "Primero ve a <a href=\"http://feedburner.com\">Feedburner.com</a> y crea tu feed. Añade la URL que Feedburner te indica. Opcionalmente puedes redirigir tu feed de comentarios del mismo modo. Para desactivar la redirección, desactiva el plugin o elimina las URLs"
+
+#: fdfeedburner.php:125
+msgid "Once you enter URLs your feeds will be redirected automatically and you do not need to take any further action."
+msgstr "Una vez hayas introducido tus feeds, serán redirigidos automaticamente sin que tengas que hacer nada más"
+
+#: fdfeedburner.php:125
+msgid "Note that your feeds may not appear to redirect to Feedburner until you add a new post."
+msgstr "Ten en cuenta que tus feeds pueden no aparecer hasta que no hayas escrito un nuevo post"
+
+#: fdfeedburner.php:128
+msgid "Redirect my feeds here:"
+msgstr "Redirige mis feeds aquí:"
+
+#: fdfeedburner.php:131
+msgid "Redirect my comments feed here:"
+msgstr "Redirigir los feeds de comentarios aquí:"
+
+#: fdfeedburner.php:134
+msgid "Advanced Options"
+msgstr "Opciones avanzadas"
+
+#: fdfeedburner.php:137
+msgid "Do not redirect category or tag feeds"
+msgstr "No redirigir feeds de categorías o etiquetas"
+
+#: fdfeedburner.php:141
+msgid "Append category/tag to URL for category/tag feeds"
+msgstr "Añadir la categoría/tag a la URL del feed de categorias/tags"
+
+#: fdfeedburner.php:145
+msgid "Do not redirect search result feeds"
+msgstr "No redirigir los resultados de búsqueda"
+
+#: fdfeedburner.php:148
+msgid "Save"
+msgstr "Guardar"
